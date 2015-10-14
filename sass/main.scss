@@ -1,0 +1,77 @@
+@import "compass";
+@import 'modular-scale';
+@import "singularitygs";
+@import "singularity-extras";
+@import "breakpoint";
+
+
+////////////////////////////////////
+////  Define the grid.
+///////////////////////////////////
+@include add-grid(1 5);
+@include add-gutter(1/5);
+@include sgs-change('debug', true);
+
+
+@include box-sizing(border-box);
+
+body {
+  background: #fafafa;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+div {
+  height: 200px; 
+}
+
+.container {
+  @include clearfix;
+  @include background-grid($color: pink);
+  max-width: 1200px;
+  margin: 0 auto; 
+  text-align: justify;
+}
+
+.sidebar1 {
+  @include grid-span(1, 1);
+  background: blue 
+}
+
+.main {
+  @include clearfix;
+  //@include background-grid($color: pink);
+  @include grid-span(1, 2);
+  @include layout(200px 2 1, 30px, $output-style: 'calc') {
+    .one {
+      @include grid-span(1, 1);
+      background: red;
+    }
+
+     .two {
+      @include clearfix;
+      @include grid-span(1, 2);
+     @include layout(1 1, 1/3, $output-style: 'isolation') {
+        .two_one {
+          background: yellow;
+          @include grid-span(1, 1); 
+        }
+        .two_two {
+          background: red; 
+          @include grid-span(1, 2);
+        }
+      }
+    }
+
+     .three {
+      @include grid-span(1, 3);
+      background: yellow;
+    }
+
+  }
+}
+
+// .sidebar2 {
+//   @include grid-span(1, 3);
+//   background: pink;
+// }
