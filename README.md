@@ -1,5 +1,5 @@
 # Singularitygs_test
-This is Using multiple $outputs ("calc", "isolation") in the same project.
+Using multiple $outputs ("calc", "isolation") within the same project.
 
 This is a test project with Singularity-extras.
 I wanted to see If I can have both fixed width and fluid width layouts within the same project.

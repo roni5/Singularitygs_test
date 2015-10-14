@@ -4,43 +4,45 @@
 
   <link rel="stylesheet" href="css/main.css">
   <meta charset="UTF-8">
-  <title>Webapp</title>
+  <title>Singularitygs Test</title>
 </head>
 <body>
   
   <div class="container">
 
-
-    <div class="sidebar1">
-      <h2>Sidebar 1</h2>
+    <div class="sidebar">
+      <h3>Sidebar</h3>
+      <p>I span the first column the the "1 5" asymetric grid, with $output-style: 'isolation'.</p>
     </div>
 
     <div class="main">
+      <p>I (the main section) span the second column of the "1 5" asymetric grid, with $output-style: 'isolation'.</p>
       
       <div class="one">
-      <h2>One</h2>
+      <h3>One</h3>
+      <p>I am nested inside the main section in a assymetric "200px 2 1" grid, and I have a fixed width with $output-style: 'calc'. Everything else shrinks, apart from me!!!</p>
       </div>
 
       <div class="two">
+       <p>I (section two) span the second column of the "200px 2 1" assymetric grid and I myself nest another  2 column grid returning to $output-style: 'isolation'.</p>
         <div class="two_one">
-          <h2>Two-One</h2>
+          <h3>Two-One</h3>
+          <p>I span the first column of the grid which is nested in section two, which is nested in the grid of the main section which has an $output-style: 'calc'</p>
         </div>
         <div class="two_two">
-          <h2>Two-Two</h2>
+          <h3>Two-Two</h3>
+          <p>I span the second column of the grid which is nested in section two, which is nested in the grid of the main section which has an $output-style: 'calc'</p>
         </div>
       </div>
 
       <div class="three">
-        <h2>Three</h2>
+        <h3>Three</h3>
+        <p>I span the third column of the "200px 2 1" assymetric grid.</p>
       </div>
 
-    </div>
+    </div> <!-- main -->
 
-    <!-- <div class="sidebar2">
-      <h2>Sidebar 2</h2>
-    </div> -->
-
-  </div>
+  </div> <!-- container -->
 
 
 
