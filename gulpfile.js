@@ -31,7 +31,7 @@ gulp.task('uglify', function() {
 gulp.task('browser-sync', function() {
     browserSync.init({
         injectChanges: true,
-        proxy: "127.0.0.1/singularitygs_extras"
+        proxy: "127.0.0.1/singularitygs_test"
     });
     gulp.watch("./sass/**/*.scss", ['sass', /*'clearcache'*/]).on('change', browserSync.reload);
     gulp.watch("./js/**/*.js", ['uglify']).on('change', browserSync.reload);
