@@ -33,7 +33,8 @@ gulp.task('browser-sync', function() {
         injectChanges: true,
         proxy: "127.0.0.1/singularitygs_test"
     });
-    gulp.watch("./sass/**/*.scss", ['sass', /*'clearcache'*/]).on('change', browserSync.reload);
+    gulp.watch("./sass/**/*.scss", ['sass']);
+    gulp.watch("./css/**/*.css").on('change', browserSync.reload);
     gulp.watch("./js/**/*.js", ['uglify']).on('change', browserSync.reload);
     gulp.watch("index.html").on('change', browserSync.reload);
 });
